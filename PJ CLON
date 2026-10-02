@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Servicios Judiciales - Prototipo Académico</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Aviso Académico -->
+  <div class="bg-amber-100 border-b border-amber-300 text-amber-900 text-xs text-center py-1">
+    Prototipo académico desarrollado para el curso de Gobierno Digital. No oficial.
+  </div>
+
+  <!-- Cabecera Institucional -->
+  <header class="bg-slate-900 text-white p-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold tracking-tight">Justicia Digital Abierta</h1>
+      <nav class="space-x-4 text-sm text-slate-300">
+        <a href="#consultas" class="hover:text-white">Expedientes</a>
+        <a href="#tramites" class="hover:text-white">Mesa de Partes</a>
+        <a href="#transparencia" class="hover:text-white">Transparencia</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Buscador Principal de Expedientes -->
+  <main class="max-w-4xl mx-auto my-12 px-4">
+    <section class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+      <h2 class="text-xl font-semibold mb-2 text-slate-900">Consulta de Expediente Judicial</h2>
+      <p class="text-sm text-gray-500 mb-6">Ingresa los datos para verificar el estado de tramitación en tiempo real.</p>
+      
+      <form class="grid grid-cols-1 md:grid-cols-3 gap-4" onsubmit="event.preventDefault(); alert('Consulta simulada con éxito');">
+        <div>
+          <label class="block text-xs font-medium text-gray-600 mb-1">Año</label>
+          <input type="number" value="2026" class="w-full border rounded p-2 text-sm focus:ring focus:ring-slate-300 outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-gray-600 mb-1">Nº Expediente</label>
+          <input type="text" placeholder="Ej. 01234" class="w-full border rounded p-2 text-sm focus:ring focus:ring-slate-300 outline-none">
+        </div>
+        <div class="flex items-end">
+          <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium p-2 text-sm rounded transition">
+            Buscar
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Tarjetas de Acceso a Servicios -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+      <div class="bg-white p-5 rounded-lg border border-gray-200 hover:border-slate-400 transition cursor-pointer">
+        <h3 class="font-bold text-slate-800 mb-1">Mesa de Partes</h3>
+        <p class="text-xs text-gray-600">Presentación digital de escritos y documentos con firma electrónica.</p>
+      </div>
+      <div class="bg-white p-5 rounded-lg border border-gray-200 hover:border-slate-400 transition cursor-pointer">
+        <h3 class="font-bold text-slate-800 mb-1">Casilla Electrónica</h3>
+        <p class="text-xs text-gray-600">Recepción de notificaciones oficiales de actos procesales.</p>
+      </div>
+      <div class="bg-white p-5 rounded-lg border border-gray-200 hover:border-slate-400 transition cursor-pointer">
+        <h3 class="font-bold text-slate-800 mb-1">Audiencias Virtuales</h3>
+        <p class="text-xs text-gray-600">Directorio de programación de vistas de causa y enlaces de acceso.</p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
